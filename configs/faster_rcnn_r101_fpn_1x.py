@@ -37,7 +37,7 @@ model = dict(
         in_channels=256,
         fc_out_channels=1024,
         roi_feat_size=7,
-        # num_classes=3,
+        num_classes=3,
         num_classes=2,
         target_means=[0., 0., 0., 0.],
         target_stds=[0.1, 0.1, 0.2, 0.2],
@@ -166,7 +166,7 @@ log_config = dict(
     ])
 # yapf:enable
 # runtime settings
-total_epochs = 10
+total_epochs = 2
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
 work_dir = '/content/work_dirs/faster_rcnn_r101_fpn_1x'
